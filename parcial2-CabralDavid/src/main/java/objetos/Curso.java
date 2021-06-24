@@ -7,6 +7,8 @@ import java.util.Date;
 public class Curso {
     private Date fecha;
     private String catedra;
+    Aula aula = new Aula();
+    Profesor profesor = new Profesor();
 
     public Curso() {
     }
