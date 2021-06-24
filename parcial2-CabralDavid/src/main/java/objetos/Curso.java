@@ -1,6 +1,7 @@
 
 package objetos;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 
@@ -9,6 +10,26 @@ public class Curso {
     private String catedra;
     Aula aula = new Aula();
     Profesor profesor = new Profesor();
+    
+    private ArrayList<Alumno> alumnos;
+
+    public int sizeAlumno() {
+        return alumnos.size();
+    }
+
+    public boolean addAlumno(Alumno e) {
+        return alumnos.add(e);
+    }
+
+    public boolean removeAlumno(Object o) {
+        return alumnos.remove(o);
+    }
+
+    public void clearAlumno() {
+        alumnos.clear();
+    }
+    
+    
 
     public Curso() {
     }
