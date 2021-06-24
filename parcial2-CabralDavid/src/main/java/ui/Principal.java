@@ -389,6 +389,7 @@ public class Principal extends javax.swing.JFrame {
         matricula = jTextField_matricula.getText();
         
         alumno = new Alumno(matricula, documento, apellido, nombre);
+        JOptionPane.showMessageDialog(rootPane, "Datos cargados correctamente");
     }//GEN-LAST:event_jButton_cargarActionPerformed
 
     private void jButton_mostrarDatosAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_mostrarDatosAlumnoActionPerformed
