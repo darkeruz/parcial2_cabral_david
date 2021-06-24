@@ -5,6 +5,7 @@
  */
 package ui;
 
+import javax.swing.JOptionPane;
 import objetos.Alumno;
 import objetos.Aula;
 import objetos.Curso;
@@ -110,6 +111,11 @@ public class Principal extends javax.swing.JFrame {
         });
 
         jButton_mostrarDatosAlumno.setText("mostrar datos");
+        jButton_mostrarDatosAlumno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_mostrarDatosAlumnoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -377,8 +383,17 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField_matriculaActionPerformed
 
     private void jButton_cargarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_cargarActionPerformed
+        documento = jTextField_documento.getText();
+        apellido = jTextField_apellido.getText();
+        nombre = jTextField_nombre.getText();
+        matricula = jTextField_matricula.getText();
         
+        alumno = new Alumno(matricula, documento, apellido, nombre);
     }//GEN-LAST:event_jButton_cargarActionPerformed
+
+    private void jButton_mostrarDatosAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_mostrarDatosAlumnoActionPerformed
+        JOptionPane.showMessageDialog(rootPane, alumno);
+    }//GEN-LAST:event_jButton_mostrarDatosAlumnoActionPerformed
 
     /**
      * @param args the command line arguments
