@@ -5,15 +5,28 @@
  */
 package ui;
 
+import objetos.Alumno;
+import objetos.Aula;
+import objetos.Curso;
+import objetos.Persona;
+import objetos.Profesor;
+
 /**
  *
  * @author Darkeruz
  */
 public class Principal extends javax.swing.JFrame {
+    Alumno alumno;
+    Profesor profesor;
+    Aula aula;
+    Curso curso;
+    
+    String documento, apellido, nombre, matricula,catedra, legajo;
+    int numero, modulo;
+    
+    
 
-    /**
-     * Creates new form Principal
-     */
+    
     public Principal() {
         initComponents();
     }
@@ -90,6 +103,11 @@ public class Principal extends javax.swing.JFrame {
         });
 
         jButton_cargar.setText("Cargar Datos");
+        jButton_cargar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton_cargarActionPerformed(evt);
+            }
+        });
 
         jButton_mostrarDatosAlumno.setText("mostrar datos");
 
@@ -357,6 +375,10 @@ public class Principal extends javax.swing.JFrame {
     private void jTextField_matriculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField_matriculaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField_matriculaActionPerformed
+
+    private void jButton_cargarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_cargarActionPerformed
+        
+    }//GEN-LAST:event_jButton_cargarActionPerformed
 
     /**
      * @param args the command line arguments
